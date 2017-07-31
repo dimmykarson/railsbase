@@ -7,7 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create(email:'dimmyk@gmail.com', password: '123456').save
-
+user = User.find(1)
+user.add_role :admin
 (1..20).each do |i|
   Event.create(title:'Teste'+i.to_s, data:i.to_s+'/07/2017').save
 end

@@ -60,3 +60,5 @@ gem 'jquery-rails'
 gem 'bootstrap-kaminari-views'
 gem 'font-awesome-rails'
 gem 'certified'
+gem "rolify"
+gem "cancancan"

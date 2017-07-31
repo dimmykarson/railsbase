@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :authenticate_user!, :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, :set_event, only: [:show, :edit, :update, :destroy, :dimmy]
 
   # GET /events
   # GET /events.json
@@ -59,6 +59,11 @@ class EventsController < ApplicationController
       format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def dimmy
+    authorize! :dimmy, current_user
+
   end
 
   private

@@ -12,7 +12,19 @@
 //
 
 //= require jquery
-//= require jquery_ujs
-//= require turbolinks
+//= require rails-ujs
+//= require adminlte.min
+//= require app.min
 //= require bootstrap-sprockets
-//= require_tree .
+//= require jquery.dataTables.min
+//= require dataTables.bootstrap.min
+//= require dataTables.responsive.min
+//= require responsive.bootstrap.min
+
+
+$(document).ready(function(){
+    $('.base-responsive').DataTable({
+        responsive:true,
+        paginate:false
+    });
+});
